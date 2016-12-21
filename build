@@ -1,1 +1,2 @@
 #!/bin/bash
+babel ./src/es6 -d ./public/js

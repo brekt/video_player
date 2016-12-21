@@ -1,0 +1,277 @@
+[
+    {
+        "index": 0,
+        "id":"100000003776495",
+        "title": "36 Hours in Pittsburgh",
+        "summary": "Beyond Pittsburgh’s pretty downtown, transformation and momentum reign, with former industrial areas giving way to restaurants, shops and art venues.",
+        "byline": "Fritzie Andrade, Louie Alfaro, Jessey Dearing, Andrew Hida and Aaron Wolfe",
+        "duration": 355100,
+        "keywords": [
+            "Travel and Vacations",
+            "Pittsburgh (Pa)"
+        ],
+        "graphicsDomain": "https://static01.nyt.com/",
+        "images": [
+            {
+                "url": "images/2015/07/01/multimedia/36hours-pittsburgh/36hours-pittsburgh-videoSixteenByNine225.jpg",
+                "width": 225,
+                "height": 126,
+                "type": "videoSixteenByNine225"
+            },
+            {
+                "url": "images/2015/07/01/multimedia/36hours-pittsburgh/36hours-pittsburgh-videoSixteenByNine310.jpg",
+                "width": 310,
+                "height": 174,
+                "type": "videoSixteenByNine310"
+            },
+            {
+                "url": "images/2015/07/01/multimedia/36hours-pittsburgh/36hours-pittsburgh-videoSixteenByNine96.jpg",
+                "width": 96,
+                "height": 54,
+                "type": "videoSixteenByNine96"
+            },
+            {
+                "url": "images/2015/07/01/multimedia/36hours-pittsburgh/36hours-pittsburgh-videoSixteenByNine768.jpg",
+                "width": 768,
+                "height": 432,
+                "type": "videoSixteenByNine768"
+            },
+            {
+                "url": "images/2015/07/01/multimedia/36hours-pittsburgh/36hours-pittsburgh-videoSixteenByNine150.jpg",
+                "width": 150,
+                "height": 84,
+                "type": "videoSixteenByNine150"
+            }
+        ],
+        "renditions": [
+            {
+                "url": "https://vp.nyt.com/video/2015/07/15/33738_1_36hours-pittsburgh_wg_480p.webm",
+                "width": 854,
+                "height": 480,
+                "mimetype": "",
+                "video_codec": "VP8",
+                "type": "video_480p_webm",
+                "fileSize": 69511261
+            },
+            {
+                "url": "https://vp.nyt.com/video/2015/07/15/33738_1_36hours-pittsburgh_wg_480p.mp4",
+                "width": 854,
+                "height": 480,
+                "mimetype": "",
+                "video_codec": "H264",
+                "type": "video_480p_mp4",
+                "fileSize": 67661034
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "id": "100000003763741",
+        "title": "36 Hours in Vilnius",
+        "summary": "In Vilnius, you can wander through the 13th-century Old Town, sample rustic Lithuanian fare and explore galleries and sleek boutiques.",
+        "byline": "Fritzie Andrade, Max Cantor, Chris Carmichael, Erika Lastovskyte, Will Lloyd and Sarah Brady Voll",
+        "duration": 363739,
+        "keywords": [
+            "Travel and Vacations",
+            "Vilnius (Lithuania)"
+        ],
+        "graphicsDomain": "https://static01.nyt.com/",
+        "images": [
+            {
+                "url": "images/2015/06/18/multimedia/36hours-vilnius/36hours-vilnius-videoSixteenByNine225.jpg",
+                "width": 225,
+                "height": 126,
+                "type": "videoSixteenByNine225",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/18/multimedia/36hours-vilnius/36hours-vilnius-videoSixteenByNine310.jpg",
+                "width": 310,
+                "height": 174,
+                "type": "videoSixteenByNine310",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/18/multimedia/36hours-vilnius/36hours-vilnius-videoSixteenByNine96.jpg",
+                "width": 96,
+                "height": 54,
+                "type": "videoSixteenByNine96",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/18/multimedia/36hours-vilnius/36hours-vilnius-videoSixteenByNine768.jpg",
+                "width": 768,
+                "height": 432,
+                "type": "videoSixteenByNine768",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/18/multimedia/36hours-vilnius/36hours-vilnius-videoSixteenByNine150.jpg",
+                "width": 150,
+                "height": 84,
+                "type": "videoSixteenByNine150",
+                "credit": ""
+            }
+        ],
+        "renditions": [
+            {
+                "url": "https://vp.nyt.com/video/2015/07/08/33772_1_36hours-vilnius_wg_480p.webm",
+                "width": 854,
+                "height": 480,
+                "mimetype": "",
+                "video_codec": "VP8",
+                "type": "video_480p_webm",
+                "fileSize": 71592607
+            },
+            {
+                "url": "https://vp.nyt.com/video/2015/07/08/33772_1_36hours-vilnius_wg_480p.mp4",
+                "width": 854,
+                "height": 480,
+                "mimetype": "",
+                "video_codec": "H264",
+                "type": "video_480p_mp4",
+                "fileSize": 67398676
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "id": "100000003743398",
+        "title": "36 Hours in Chengdu",
+        "summary": "In high-tech Chengdu, the old way of life persists, with graceful teahouses, serene parks and a lively Tibetan quarter.",
+        "byline": "Jonah M. Kessel, Max Duncan, Sarah Li, Will Lloyd and Dominic Yip",
+        "duration": 364323,
+        "keywords": [
+            "Travel and Vacations",
+            "Chengdu (China)"
+        ],
+        "graphicsDomain": "https://static01.nyt.com/",
+        "images": [
+            {
+                "url": "images/2015/06/15/multimedia/36hours-chengdu/36hours-chengdu-videoSixteenByNine225.jpg",
+                "width": 225,
+                "height": 126,
+                "type": "videoSixteenByNine225",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/15/multimedia/36hours-chengdu/36hours-chengdu-videoSixteenByNine310.jpg",
+                "width": 310,
+                "height": 174,
+                "type": "videoSixteenByNine310",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/15/multimedia/36hours-chengdu/36hours-chengdu-videoSixteenByNine96.jpg",
+                "width": 96,
+                "height": 54,
+                "type": "videoSixteenByNine96",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/15/multimedia/36hours-chengdu/36hours-chengdu-videoSixteenByNine768.jpg",
+                "width": 768,
+                "height": 432,
+                "type": "videoSixteenByNine768",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/15/multimedia/36hours-chengdu/36hours-chengdu-videoSixteenByNine150.jpg",
+                "width": 150,
+                "height": 84,
+                "type": "videoSixteenByNine150",
+                "credit": ""
+            }
+        ],
+        "renditions": [
+            {
+                "url": "https://vp.nyt.com/video/2015/07/01/32660_1_36hours-chengdu_wg_480p.webm",
+                "width": 854,
+                "height": 480,
+                "mimetype": "",
+                "video_codec": "VP8",
+                "type": "video_480p_webm",
+                "fileSize": 71533458
+            },
+            {
+                "url": "https://vp.nyt.com/video/2015/07/01/32660_1_36hours-chengdu_wg_480p.mp4",
+                "width": 854,
+                "height": 480,
+                "mimetype": "",
+                "video_codec": "H264",
+                "type": "video_480p_mp4",
+                "fileSize": 67779929
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "id": "100000003725129",
+        "title": "36 Hours in Split",
+        "summary": "Surrounded by mountains and sea, Split has it all: Roman ruins, trendy shops and fashionable restaurants.",
+        "byline": "Fritzie Andrade, Max Cantor, Chris Carmichael, Will Lloyd, Dinko Paleka and Sarah Brady Voll",
+        "duration": 353854,
+        "keywords": [
+            "Travel and Vacations",
+            "Split (Croatia)"
+        ],
+        "graphicsDomain": "https://static01.nyt.com/",
+        "images": [
+            {
+                "url": "images/2015/06/05/multimedia/36hours-split/36hours-split-videoSixteenByNine225.jpg",
+                "width": 225,
+                "height": 126,
+                "type": "videoSixteenByNine225",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/05/multimedia/36hours-split/36hours-split-videoSixteenByNine310.jpg",
+                "width": 310,
+                "height": 174,
+                "type": "videoSixteenByNine310",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/05/multimedia/36hours-split/36hours-split-videoSixteenByNine96.jpg",
+                "width": 96,
+                "height": 54,
+                "type": "videoSixteenByNine96",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/05/multimedia/36hours-split/36hours-split-videoSixteenByNine768.jpg",
+                "width": 768,
+                "height": 432,
+                "type": "videoSixteenByNine768",
+                "credit": ""
+            },
+            {
+                "url": "images/2015/06/05/multimedia/36hours-split/36hours-split-videoSixteenByNine150.jpg",
+                "width": 150,
+                "height": 84,
+                "type": "videoSixteenByNine150",
+                "credit": ""
+            }
+        ],
+        "renditions": [
+            {
+                "url": "https://vp.nyt.com/video/2015/06/24/33398_1_36hours-split_wg_480p.webm",
+                "width": 854,
+                "height": 480,
+                "mimetype": "",
+                "video_codec": "VP8",
+                "type": "video_480p_webm",
+                "fileSize": 69492581
+            },
+            {
+                "url": "https://vp.nyt.com/video/2015/06/24/33398_1_36hours-split_wg_480p.mp4",
+                "width": 854,
+                "height": 480,
+                "mimetype": "",
+                "video_codec": "H264",
+                "type": "video_480p_mp4",
+                "fileSize": 65790001
+            }
+        ]
+    }
+]
