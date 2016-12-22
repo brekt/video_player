@@ -8,7 +8,7 @@ xhr.open('GET', 'http://localhost:3333/data');
 xhr.onload = function () {
   if (xhr.status === 200) {
     content = parseData(xhr.responseText);
-    populateDOM(content);
+    initializeDOM(content);
   } else {
     alert('Request failed. xhr.status: ' + xhr.status);
   }
@@ -38,7 +38,7 @@ function parseData(data) {
  * @param {object} content - the video playlist content.
  *
  */
-function populateDOM(content) {
+function initializeDOM(content) {
   content.videos.map(function (video) {
     var videoElement = document.querySelector('video');
     videoElement.src = content.videos[0];
