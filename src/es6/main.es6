@@ -1,17 +1,19 @@
-let content = {};
+const content = {};
 
 // ajax request to get playlist data
-const xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://localhost:3333/data');
-xhr.onload = () => {
-  if (xhr.status === 200) {
-    content = parseData(xhr.responseText);
-    initializeDOM(content);
-  } else {
-    alert(`Request failed. xhr.status: ${xhr.status}`);
-  }
-};
-xhr.send();
+(function() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://localhost:3333/data');
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      content.data = parseData(xhr.responseText);
+      initializeDOM(content.data);
+    } else {
+      alert(`Request failed with status: ${xhr.status}`);
+    }
+  };
+  xhr.send();
+})();
 
 /**
  * parse data for content
@@ -20,14 +22,15 @@ xhr.send();
  */
 function parseData(data) {
   data = JSON.parse(data);
-  content.thumbnails = data.map((obj) => {
+  content.thumbnailUrls = data.map((obj) => {
     let imageUrl = `https://static01.nyt.com/${obj['images'][3]['url']}`;
     return imageUrl;
   });
-  content.videos = data.map((obj) => {
+  content.videoUrls = data.map((obj) => {
     let videoUrl = obj['renditions'][1]['url'];
     return videoUrl;
   });
+  content.data = data; // replacing string with parsed json on global obj;
   return content;
 }
 
@@ -37,11 +40,36 @@ function parseData(data) {
  *
  */
 function initializeDOM(content) {
-  content.videos.map((video) => {
-    let videoElement = document.querySelector('video');
-    videoElement.src = content.videos[0];
+  // set up video element
+  let videoElement = document.querySelector('video');
+  videoElement.src = content.videoUrls[0];
+  content.currentVideo = 0;
+  videoElement.addEventListener('ended', (event) => {
+    event.preventDefault();
+    content.currentVideo === content.videoUrls.length - 1
+      ? content.currentVideo = 0
+      : content.currentVideo++;
+    videoElement.src = content.videoUrls[content.currentVideo];
+    videoElement.load();
+    videoElement.play();
   });
-  content.thumbnails.map((thumbnail) => {
+  // set up video thumbnails
+  content.thumbnailUrls.map((thumbnailUrl, index) => {
     // TODO
   });
+}
+
+/**
+ * play next video in playlist
+ * @param {number} videoElement - the video element in the DOM.
+ * @param {object} currentVideo - the index of the current video URL.
+ *
+ */
+function playNextVideo(videoElement, currentVideo) {
+  alert('video ended');
+  currentVideo > 3 ? currentVideo = 0 : currentVideo++;
+  videoElement.src = content.videoUrls[currentVideo];
+  videoElement.load();
+  videoElement.play();
+  content.currentVideo = currentVideo;
 }
