@@ -7,7 +7,7 @@ const content = {};
   xhr.onload = () => {
     if (xhr.status === 200) {
       content.data = parseData(xhr.responseText);
-      initializeDOM(content.data);
+      initializeDOM();
     } else {
       alert(`Request failed with status: ${xhr.status}`);
     }
@@ -36,12 +36,17 @@ function parseData(data) {
 
 /**
  * add video and thumbnail images to view
- * @param {object} content - the video playlist content.
  *
  */
-function initializeDOM(content) {
-  // set up video element
+function initializeDOM() {
+  let thumbnailElements = document.querySelectorAll('div.thumbnails');
   let videoElement = document.querySelector('video');
+  // set up video thumbnails
+  for (let i = 0; i < thumbnailElements.length; i++) {
+    let imgElement = thumbnailElements[i].querySelector('img');
+    imgElement.src = content.thumbnailUrls[i];
+  }
+  // set up video element
   videoElement.src = content.videoUrls[0];
   content.currentVideo = 0;
   videoElement.addEventListener('ended', (event) => {
@@ -53,23 +58,4 @@ function initializeDOM(content) {
     videoElement.load();
     videoElement.play();
   });
-  // set up video thumbnails
-  content.thumbnailUrls.map((thumbnailUrl, index) => {
-    // TODO
-  });
-}
-
-/**
- * play next video in playlist
- * @param {number} videoElement - the video element in the DOM.
- * @param {object} currentVideo - the index of the current video URL.
- *
- */
-function playNextVideo(videoElement, currentVideo) {
-  alert('video ended');
-  currentVideo > 3 ? currentVideo = 0 : currentVideo++;
-  videoElement.src = content.videoUrls[currentVideo];
-  videoElement.load();
-  videoElement.play();
-  content.currentVideo = currentVideo;
 }
