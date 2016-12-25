@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.get('/data', (req, res) => {
   let obj;
-  fs.readFile('./data/playlist.json', 'utf8', function(err, data) {
+  fs.readFile('./data/playlist.json', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
       res.send(err);
