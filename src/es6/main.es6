@@ -57,6 +57,8 @@ function initializeDOM() {
       event.preventDefault();
       playSpecificVideo(i);
     });
+    let imgTitle = thumbnailElements[i].querySelector('h4');
+    imgTitle.innerHTML = content.data[i]['title'];
   }
   // set up video element
   videoElement.src = content.videoUrls[0];

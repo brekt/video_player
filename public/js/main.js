@@ -59,6 +59,8 @@ function initializeDOM() {
       event.preventDefault();
       playSpecificVideo(i);
     });
+    var imgTitle = thumbnailElements[i].querySelector('h4');
+    imgTitle.innerHTML = content.data[i]['title'];
   };
 
   for (var i = 0; i < thumbnailElements.length; i++) {
