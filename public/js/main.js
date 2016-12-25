@@ -1,6 +1,10 @@
 'use strict';
 
 var content = {};
+var videoElement = void 0;
+var videoTitle = void 0;
+var videoDescription = void 0;
+var thumbnailElements = void 0;
 
 // ajax request to get playlist data
 (function () {
@@ -40,20 +44,19 @@ function parseData(data) {
  *
  */
 function initializeDOM() {
-  var thumbnailElements = document.querySelectorAll('div.thumbnails');
-  var videoElement = document.querySelector('video');
-  var videoTitle = document.querySelector('h1.video-title');
-  var videoDescription = document.querySelector('h3.video-description');
+  videoElement = document.querySelector('video');
+  videoTitle = document.querySelector('h1.video-title');
+  videoDescription = document.querySelector('h3.video-description');
+  thumbnailElements = document.querySelectorAll('div.thumbnails');
   // set up video thumbnails
-  var currentThumbImgClasses = thumbnailElements[0].querySelector('img').classList;
-  currentThumbImgClasses.add('current-video');
+  var initialThumbImgClasses = thumbnailElements[0].querySelector('img').classList;
+  initialThumbImgClasses.add('current-video');
 
   var _loop = function _loop(i) {
     var imgElement = thumbnailElements[i].querySelector('img');
     imgElement.src = content.thumbnailUrls[i];
     imgElement.addEventListener('click', function (event) {
       event.preventDefault();
-      currentThumbImgClasses.remove('current-video');
       playSpecificVideo(i);
     });
   };
@@ -66,8 +69,7 @@ function initializeDOM() {
   content.currentVideo = 0;
   videoElement.addEventListener('ended', function (event) {
     event.preventDefault();
-    currentThumbImgClasses.remove('current-video');
-    playNextVideo(videoElement);
+    playNextVideo();
   });
   // set up video info section
   videoTitle.innerHTML = content.data[0]['title'];
@@ -76,43 +78,43 @@ function initializeDOM() {
 
 /**
  * plays next video after previous video ends.
- * @param {object} videoElement - HTML video element.
  *
  */
-function playNextVideo(videoElement) {
+function playNextVideo() {
+  updateThumbnails(content.currentVideo + 1, content.currentVideo);
   content.currentVideo === content.videoUrls.length - 1 ? content.currentVideo = 0 : content.currentVideo++;
   videoElement.src = content.videoUrls[content.currentVideo];
   videoTitle.innerHTML = content.data[content.currentVideo]['title'];
-  videoDescription.innerHTML = content.data[content.currentVideo]['description'];
+  videoDescription.innerHTML = content.data[content.currentVideo]['summary'];
   videoElement.load();
   videoElement.play();
-  updateThumbnails(content.currentVideo);
 }
 
 /**
  * plays a specific video on click of thumbnail.
- * @param {object} videoElement - HTML video element.
  * @param {number} whichVideo - index of video to play.
  *
  */
-function playSpecificVideo(videoElement, whichVideo) {
-  //  videoElement.pause();
+function playSpecificVideo(whichVideo) {
+  updateThumbnails(whichVideo, content.currentVideo);
+  videoElement.pause();
   videoElement.src = content.videoUrls[whichVideo];
   videoTitle.innerHTML = content.data[whichVideo]['title'];
-  videoDescription.innerHTML = content.data[whichVideo]['description'];
+  videoDescription.innerHTML = content.data[whichVideo]['summary'];
   videoElement.load();
   videoElement.play();
   content.currentVideo = whichVideo;
-  updateThumbnails(whichVideo);
 }
 
 /**
  * plays a specific video on click of thumbnail.
  * @param {number} whichVideo - index of video to play.
+ * @param {number} previousVideo - index of previous video.
  *
  */
-function updateThumbnails(whichVideo) {
-  var thumbnailElements = document.querySelectorAll('div.thumbnails');
+function updateThumbnails(whichVideo, previousVideo) {
+  var previousImgClasses = thumbnailElements[previousVideo].querySelector('img').classList;
+  previousImgClasses.remove('current-video');
   var thumbnailImgClasses = thumbnailElements[whichVideo].querySelector('img').classList;
   thumbnailImgClasses.add('current-video');
 }
