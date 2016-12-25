@@ -77,10 +77,15 @@ function initializeDOM() {
  *
  */
  function playNextVideo() {
-   updateThumbnails(content.currentVideo + 1, content.currentVideo);
-   content.currentVideo === content.videoUrls.length - 1
-     ? content.currentVideo = 0
-     : content.currentVideo++;
+   let previousVideo;
+   if (content.currentVideo === content.videoUrls.length - 1) {
+     content.currentVideo = 0;
+     previousVideo = 3;
+   } else {
+     content.currentVideo++;
+     previousVideo = content.currentVideo - 1;
+   }
+   updateThumbnails(content.currentVideo, previousVideo);
    videoElement.src = content.videoUrls[content.currentVideo];
    videoTitle.innerHTML = content.data[content.currentVideo]['title'];
    videoDescription.innerHTML =
