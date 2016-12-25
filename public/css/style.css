@@ -1,3 +1,22 @@
-div {
-  border: solid 2px black;
+body {
+  background-color: #111111;
+  font-family: 'Domine', serif;
+  color: #efefef;
+}
+
+
+.video-title {
+  margin: 10px 10px 10px 20px;
+}
+
+.video-description {
+  margin: 0px 20px 10px 20px;
+}
+
+.current-video {
+  border: 5px solid #ffffff;
+}
+
+img {
+  margin-bottom: 20px;
 }
