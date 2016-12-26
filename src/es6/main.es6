@@ -7,6 +7,10 @@ let thumbnailElements;
 // ajax request to get playlist data
 (function() {
   const xhr = new XMLHttpRequest();
+  /*
+   * Change this get request to your machine's local ip instead of localhost if
+   * you want to test on a mobile device.
+  */
   xhr.open('GET', 'http://localhost:3333/data');
   xhr.onload = () => {
     if (xhr.status === 200) {
