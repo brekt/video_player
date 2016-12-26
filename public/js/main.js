@@ -9,7 +9,7 @@ var thumbnailElements = void 0;
 // ajax request to get playlist data
 (function () {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://192.168.0.15:3333/data');
+  xhr.open('GET', 'http://localhost:3333/data');
   xhr.onload = function () {
     if (xhr.status === 200) {
       content.data = parseData(xhr.responseText);
@@ -68,6 +68,7 @@ function initializeDOM() {
   }
   // set up video element
   videoElement.src = content.videoUrls[0];
+  videoElement.poster = content.thumbnailUrls[0];
   content.currentVideo = 0;
   videoElement.addEventListener('ended', function (event) {
     event.preventDefault();
@@ -93,6 +94,7 @@ function playNextVideo() {
   }
   updateThumbnails(content.currentVideo, previousVideo);
   videoElement.src = content.videoUrls[content.currentVideo];
+  videoElement.poster = content.thumbnailUrls[content.currentVideo];
   videoTitle.innerHTML = content.data[content.currentVideo]['title'];
   videoDescription.innerHTML = content.data[content.currentVideo]['summary'];
   videoElement.load();
@@ -108,6 +110,7 @@ function playSpecificVideo(whichVideo) {
   updateThumbnails(whichVideo, content.currentVideo);
   videoElement.pause();
   videoElement.src = content.videoUrls[whichVideo];
+  videoElement.poster = content.thumbnailUrls[whichVideo];
   videoTitle.innerHTML = content.data[whichVideo]['title'];
   videoDescription.innerHTML = content.data[whichVideo]['summary'];
   videoElement.load();
