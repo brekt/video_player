@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel ./src/es6 -d ./public/js",
     "start": "npm run build && node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "babel ./test -d ./test && mocha"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,8 @@
     "babel-core": "^6.21.0",
     "babel-preset-es2015": "^6.18.0",
     "eslint": "^3.12.2",
-    "eslint-config-google": "^0.7.1"
+    "eslint-config-google": "^0.7.1",
+    "jest": "^18.0.0",
+    "mocha": "^3.2.0"
   }
 }

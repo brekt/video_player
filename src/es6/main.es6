@@ -7,7 +7,7 @@ let thumbnailElements;
 // ajax request to get playlist data
 (function() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://localhost:3333/data');
+  xhr.open('GET', 'http://192.168.0.15:3333/data');
   xhr.onload = () => {
     if (xhr.status === 200) {
       content.data = parseData(xhr.responseText);
