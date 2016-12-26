@@ -1,1 +1,2 @@
--R nyan
+-R spec
+-t 15000
