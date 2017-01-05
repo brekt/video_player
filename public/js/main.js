@@ -5,10 +5,15 @@ var videoElement = void 0;
 var videoTitle = void 0;
 var videoDescription = void 0;
 var thumbnailElements = void 0;
+var body = void 0;
 
 // ajax request to get playlist data
 (function () {
   var xhr = new XMLHttpRequest();
+  /*
+   * Change this get request to your machine's local ip instead of localhost if
+   * you want to test on a mobile device.
+  */
   xhr.open('GET', 'http://localhost:3333/data');
   xhr.onload = function () {
     if (xhr.status === 200) {
@@ -48,6 +53,7 @@ function initializeDOM() {
   videoTitle = document.querySelector('h1.video-title');
   videoDescription = document.querySelector('h3.video-description');
   thumbnailElements = document.querySelectorAll('div.thumbnails');
+  body = document.querySelector('body');
   // set up video thumbnails
   var initialThumbImgClasses = thumbnailElements[0].querySelector('img').classList;
   initialThumbImgClasses.add('current-video');
@@ -57,6 +63,7 @@ function initializeDOM() {
     imgElement.src = content.thumbnailUrls[i];
     imgElement.addEventListener('click', function (event) {
       event.preventDefault();
+      body.scrollTop = 0;
       playSpecificVideo(i);
     });
     var imgTitle = thumbnailElements[i].querySelector('h4');

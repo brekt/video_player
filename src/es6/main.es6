@@ -3,6 +3,7 @@ let videoElement;
 let videoTitle;
 let videoDescription;
 let thumbnailElements;
+let body;
 
 // ajax request to get playlist data
 (function() {
@@ -50,6 +51,7 @@ function initializeDOM() {
   videoTitle = document.querySelector('h1.video-title');
   videoDescription = document.querySelector('h3.video-description');
   thumbnailElements = document.querySelectorAll('div.thumbnails');
+  body = document.querySelector('body');
   // set up video thumbnails
   let initialThumbImgClasses = thumbnailElements[0]
     .querySelector('img').classList;
@@ -59,6 +61,7 @@ function initializeDOM() {
     imgElement.src = content.thumbnailUrls[i];
     imgElement.addEventListener('click', (event) => {
       event.preventDefault();
+      body.scrollTop = 0;
       playSpecificVideo(i);
     });
     let imgTitle = thumbnailElements[i].querySelector('h4');
