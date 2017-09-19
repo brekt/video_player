@@ -8,14 +8,9 @@ cd video_player
 npm i
 npm start
 ```
-Navigate to localhost:3333.&ast;
+Navigate to localhost:3333.
 
-&ast;_If you want to test on mobile rather than just the device emulator, you'll need to change line 14 in src/es6/main.es6 to your machine's local ip and run `npm start` again._
 # Testing
 ```
 npm test
 ```
-# TODO
-* Turn the player into a React component.
-  * Use Jest for testing.
-* Use Webpack to bundle files and spin up a testing server.
